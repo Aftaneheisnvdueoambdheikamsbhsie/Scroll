@@ -3,72 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notification Example</title>
+    <title>Notifikasi</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #000;
             color: white;
-            margin: 0;
-            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            margin: 0;
         }
         .notification {
-            display: none;
-            position: relative;
             width: 90%;
             max-width: 400px;
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: #1c1c1e;
+            color: #e5e5e5;
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             text-align: center;
+            line-height: 1.6;
+        }
+        .notification strong {
+            font-size: 18px;
+            color: white;
         }
         .notification p {
-            margin: 10px 0;
-            line-height: 1.5;
+            margin: 15px 0;
             font-size: 14px;
         }
-        .notification button {
+        .notification button, .notification a {
+            display: inline-block;
             margin-top: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
             font-size: 14px;
+            color: #007aff;
+            text-decoration: none;
+            background: none;
+            border: none;
+            cursor: pointer;
         }
-        .notification button:hover {
-            background-color: #45a049;
+        .notification button:hover, .notification a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-
-<div class="notification" id="notification">
-    <p><strong>Coba Lagi Nanti</strong></p>
-    <p>
-        Akun anda diblokir sementara dari melakukan tindakan ini. Berbagi akun dengan layanan yang membantu Anda mendapatkan lebih banyak suka dan pengikut jelas melanggar Panduan Komunitas kami.
-        Pemblokiran ini akan kedaluwarsa pada <strong>2025-02-20</strong>. Beri tahu apakah menurut Anda ini adalah sebuah kesalahan.
-    </p>
-    <button onclick="closeNotification()">Oke</button>
-</div>
-
-<script>
-    // Show notification after 10 seconds
-    setTimeout(function () {
-        document.getElementById('notification').style.display = 'block';
-    }, 10000);
-
-    // Function to close the notification
-    function closeNotification() {
-        document.getElementById('notification').style.display = 'none';
-    }
-</script>
-
+    <div class="notification">
+        <p><strong>Coba Lagi Nanti</strong></p>
+        <p>
+            Akun anda diblokir sementara dari melakukan tindakan ini. Berbagi akun dengan layanan yang membantu Anda mendapatkan lebih banyak suka dan pengikut jelas melanggar Panduan Komunitas kami.
+            Pemblokiran ini akan kedaluwarsa pada <strong>2025-01-30</strong>. Beri tahu apakah menurut Anda ini adalah sebuah kesalahan.
+        </p>
+        <button>Oke</button>
+        <a href="#">Beri tahu kami</a>
+    </div>
 </body>
 </html>
