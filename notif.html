@@ -16,8 +16,8 @@
             margin: 0;
         }
         .notification {
-            width: 90%;
-            max-width: 400px;
+            width: 80%;
+            max-width: 350px;
             background-color: #1c1c1e;
             color: #e5e5e5;
             padding: 20px;
@@ -33,18 +33,33 @@
         .notification p {
             margin: 15px 0;
             font-size: 14px;
+            text-align: justify;
         }
-        .notification button, .notification a {
-            display: inline-block;
-            margin-top: 10px;
+        .divider {
+            border-top: 1px solid #333;
+            margin: 15px 0;
+        }
+        .notification button {
+            display: block;
+            width: 100%;
+            padding: 10px 0;
             font-size: 14px;
-            color: #007aff;
-            text-decoration: none;
+            color: white;
             background: none;
             border: none;
             cursor: pointer;
         }
-        .notification button:hover, .notification a:hover {
+        .notification button:hover {
+            background-color: #333;
+        }
+        .notification a {
+            display: block;
+            margin-top: 10px;
+            font-size: 14px;
+            color: white;
+            text-decoration: none;
+        }
+        .notification a:hover {
             text-decoration: underline;
         }
     </style>
@@ -54,9 +69,11 @@
         <p><strong>Coba Lagi Nanti</strong></p>
         <p>
             Akun anda diblokir sementara dari melakukan tindakan ini. Berbagi akun dengan layanan yang membantu Anda mendapatkan lebih banyak suka dan pengikut jelas melanggar Panduan Komunitas kami.
-            Pemblokiran ini akan kedaluwarsa pada <strong>2025-01-30</strong>. Beri tahu apakah menurut Anda ini adalah sebuah kesalahan.
+            Pemblokiran ini akan kedaluwarsa pada <strong>2025-02-20</strong>. Beri tahu apakah menurut Anda ini adalah sebuah kesalahan.
         </p>
+        <div class="divider"></div>
         <button>Oke</button>
+        <div class="divider"></div>
         <a href="#">Beri tahu kami</a>
     </div>
 </body>
