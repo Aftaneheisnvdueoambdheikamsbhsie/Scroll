@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .notification {
+            display: none;
+            position: relative;
+            width: 90%;
+            max-width: 400px;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        .notification p {
+            margin: 10px 0;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+        .notification button {
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .notification button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="notification" id="notification">
+    <p><strong>Coba Lagi Nanti</strong></p>
+    <p>
+        Akun anda diblokir sementara dari melakukan tindakan ini. Berbagi akun dengan layanan yang membantu Anda mendapatkan lebih banyak suka dan pengikut jelas melanggar Panduan Komunitas kami.
+        Pemblokiran ini akan kedaluwarsa pada <strong>2025-02-20</strong>. Beri tahu apakah menurut Anda ini adalah sebuah kesalahan.
+    </p>
+    <button onclick="closeNotification()">Oke</button>
+</div>
+
+<script>
+    // Show notification after 10 seconds
+    setTimeout(function () {
+        document.getElementById('notification').style.display = 'block';
+    }, 10000);
+
+    // Function to close the notification
+    function closeNotification() {
+        document.getElementById('notification').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
