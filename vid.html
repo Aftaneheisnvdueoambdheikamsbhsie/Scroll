@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Video</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: white;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .video-wrapper {
+            position: relative;
+            width: 80vw;
+            height: 20vw; /* Aspect ratio 16:4 */
+            background-color: black;
+            overflow: hidden;
+        }
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .icons {
+            display: flex;
+            justify-content: space-between;
+            width: 80vw;
+            margin-top: 10px;
+        }
+        .icon {
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .notification {
+            display: none;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 80vw;
+        }
+        .notification button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="video-wrapper">
+        <video id="video" controls autoplay>
+            <source src="vid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="notification" id="notification">
+            <p><strong>Coba Lagi Nanti</strong></p>
+            <p>Akun anda diblokir sementara dari melakukan tindakan ini. Berbagi akun dengan layanan yang membantu Anda mendapatkan lebih banyak suka dan pengikut jelas melanggar Panduan Komunitas kami. Pembblokiran ini akan kedaluwarsa pada 2025-03-20. Beri tahu apakah menurut Anda ini adalah sebuah kesalahan.</p>
+            <button>Oke</button>
+        </div>
+    </div>
+    
+    <div class="icons">
+        <div class="icon">❤️</div>
+        <div class="icon">💬</div>
+        <div class="icon">🔗</div>
+    </div>
+</div>
+
+<script>
+    // Show notification after 10 seconds
+    setTimeout(function() {
+        document.getElementById('notification').style.display = 'block';
+    }, 10000);
+</script>
+
+</body>
+</html>
